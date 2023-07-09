@@ -1,0 +1,25 @@
+
+*{
+    padding: 0;
+    margin: 0 ;
+    box-sizing: border-box; /*contains the border and padding suppose a element has 100px those 100px will include any border or padding you have added. This makes it easier to size elements.*/
+    
+}
+html{
+    /*font-size:10px*/ /* so that now 1 rem=10px instead of 16px */
+    /*if the user has different font size then this will mess up the structure of the html therefore it is good idea to use font-size in terms of % i.e-10/16=0.625 or 62.5% */
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+
+}
+.test{
+    background-color: red;
+    max-width: 100rem;             /* when you scrool the width will automatically decrease/increase */
+    padding: 10rem;
+
+} 

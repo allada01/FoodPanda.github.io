@@ -1,0 +1,494 @@
+/* keep the elements in the order as they appear in the web page */
+
+/* ******************************** */
+/* ****** General Reusable Components */
+/* ******************************** */
+
+.btn{
+    display: inline-block; /* so that the buttons will be in the same line and also we can play with padding and border and still the buttons will be in the same line.*/
+    padding: 1.6rem 3.2rem;
+    text-decoration: none; /* we get rid of the lines under the text */
+    font-size: 2rem;
+    color: white;
+    border-radius: 9px;
+    font-family: inherit; /* takes the font of the parent */
+    
+}
+
+.btn--full{
+    background-color: #e57e22;   
+}
+
+.btn--full:hover{
+    background-color: #cf711f;
+}
+
+.btn--outline{
+    background-color: white;
+    color: #555;
+}
+
+.btn--outline:hover{
+    background-color: #fdf2e9;
+    box-shadow: inset 0 0 0 3px #fff;  /*box shadow inside the element & the 3rd zero is for blur*/
+
+}
+
+.margin-right-sm{
+    margin-right: 1.6rem;
+}
+
+/* code for custom grid */
+
+.container{
+    max-width: 120rem;
+    padding:0 3.2rem;
+    margin:0 auto;
+}
+
+.grid{
+    display:grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+    
+    
+}
+
+.grid-2-cols{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid-3-cols{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.grid-4-cols{
+    grid-template-columns: repeat(4,1fr);
+}
+
+.grid-5-cols{ /* in footer-->div-->class, we used this instead of grid--footer but the spacing was not equal in all the 5 rows therefore we used grid--footer instead */
+    grid-template-columns: repeat(5,1fr);
+}
+
+.grid--center-v{
+    align-items: center; /*to align items in the center, we could also write this same line in the grid section but making this a seperate class and adding it makes our grid section scalable(means you could copy the same grid and use it somewhere else*/
+}
+
+.heading-secondary{
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+    color: #333;
+
+}
+
+.heading-tertiary{
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+    color: #333;
+
+}
+
+.subheading{
+    display: block;  /* because span is a inline element */
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+
+/* ******************************** */
+/* ****** Header Section *****/
+/* ******************************** */
+
+.header{ 
+    display: flex;
+    background-color: #fdf2e9;
+    justify-content: space-between; /* so that the navigation goes to the right end of the header */
+    align-items: center;
+    padding: 0 4.8rem;
+    height: 9.6rem;
+}
+.logo{
+    height: 4rem;
+    
+}
+
+/* ******************************** */
+/* ****** Navigation**** */
+/* ******************************** */
+
+.main-nav-list{
+    list-style: none;
+    display: flex;
+    gap: 4.8rem; /* we could use padding, but since we are using display as flex using "gap" better. */
+    align-items: center;
+
+}
+.main-nav-link{
+    display: inline block; /*so that we can add padding and everything to this */
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: all 0.3s; /* the gradual color change in the navbar */
+
+}
+.main-nav-link:hover{
+    color: #cf711f;
+}
+
+.nav-cta{
+    padding: 1.2rem 2.4rem; /*always in button it's just a general practice whatever padding you add to the top and the bottom you just add double to the left and the right */
+    background-color: #e67e22;
+    color: white;
+    border-radius: 9px;
+
+}
+.nav-cta:hover{
+    background-color: #cf711f;
+    color: white;
+}
+
+/* ******************************** */
+/* ****** Hero Section**** */
+/* ******************************** */
+
+.section-hero{
+    background-color: #fdf2e9;
+    padding: 9.6rem 0;
+    
+}
+
+
+
+.hero {
+    max-width: 130rem;
+    margin: 0 auto; /* margin: 0 auto; is used to align an element in the center*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;/* 1 fr says that sharing space of each of the item is same.*/
+    align-items: center;
+    gap: 9.6rem;
+}
+
+.hero-img {
+    width: 100%;
+    /* this just means that image will take the width of the parent and the parent here is hero-img-box */
+
+}
+
+.heading-primary{
+    color: #333;
+    font-size: 5.2rem;
+    line-height: 1.03;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+    
+}
+
+.hero-description{
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.5rem;
+}
+
+.delivered-meals{
+    display: flex;
+    margin: 8rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+.delivered-imgs{
+    display: flex;
+}   
+
+
+.delivered-imgs img{
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius:50%;
+    margin-right: -1.6rem; /*to decrease the space*/
+    border: 3px solid #fdf2e9;
+
+
+}
+
+.delivered-text{
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+
+}       
+
+.delivered-text span{
+    color: #cf711f;
+    font-weight: 700;
+
+}
+
+/* ******************************** */
+/* ******Featured Section ****/
+/* ******************************** */
+
+.section-featured{
+    padding: 4.8rem 0;
+
+}
+
+.featured-in-heading{
+    font-size: 1.4rem;
+    text-align: center; /*if we have a block level element and we do not have a width just to align it in the center we use text-align*/
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 2.4rem;
+
+
+}
+
+.logos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logos img{
+    height: 3rem; /*we went with height and not width because if you see the logos  have different widths associated with them but have the same heights*/
+    filter: brightness(0); /*to change the color of all the images at once*/
+    opacity: 50%;
+}   
+
+/* ******************************** */
+/* ******How it works section *** */
+/* ******************************** */
+
+.section-how{
+    padding: 9.6rem 0; /*section hero also has the same padding. Make sure to keep your padding consistent as long as possible*/
+
+
+}
+.step-img{
+    width:35%;
+}
+
+.step-number{
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+}
+
+.step-description{
+    font-size: 1.8rem;
+    line-height: 1.5;
+    
+}
+
+.step-img-box{
+    position: relative; /* this is a parent of the round img behind the iphone see line 271*/
+    display: flex;
+    align-items: center;
+    justify-content: center;  /*so we have the vertical and the horizontal elements  both in the center*/
+
+}
+
+.step-img-box::before{  /* ::before is a pseudo code */
+    content: "";/*we don't want any text to be seen next to the image therefore empty content.*/
+    width: 60%;
+    background-color: #cf711f;
+    /* height: 60%; /height 60% was not working so we used padding-bottom as a hack to show the height */
+    padding-bottom: 60%;
+    border-radius: 50%;
+    position: absolute; /*to make it go in the background*/
+    /* and if anything has a absolute position its parent must have a relative position */
+    background-color: #fdf2e9;
+    z-index: -2;/*if two elements are overlapping we decide which element is going to on top of the other similiar to "order" element*/
+    /* -2 means the iphone and the smaller circle has to be displayed on top of the larger circle*/
+
+}
+.step-img-box::after{
+    content: "";
+    width: 45%;
+    padding-bottom: 50%;
+    background-color:#fae5d3;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;/* because we want the smaller circle to be on top of larger circle*/
+}
+
+/* ******************************** */
+/* ******CTA Section*** */
+/* ******************************** */
+
+.section-cta{
+    padding: 4.8rem 0 12.8rem;
+
+}
+
+.cta{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-image: linear-gradient(to right bottom, #eb984e,#e67e22);
+    box-shadow: 0 2.4rem 4.8rem rgb(0,0,0,45%);
+    
+    border-radius: 12px;
+    overflow: hidden; /* when you assign a border radius wothout overflow the image will not be round */
+}
+
+.cta-img-box{
+    background-image:  linear-gradient(to right bottom, rgba(235, 151, 78, 0.35),rgba(230, 125, 34, 0.35)), url("../img/eating.jpg"); /* ../ will navigate 1 step back and and go to the root folder and the search for img eating.png without ../ browser will show the error because img doesn't exist in css folder */
+    background-size: cover; /* to show the full image without this only half of the image would be shown */
+
+
+}
+
+.cta-text-box{
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+ 
+}
+
+.cta .heading-secondary{
+    color: #45260a;
+    margin-bottom: 3.2rem;
+}
+
+.cta-text{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 4.8rem;
+    color: #45260a;
+}
+
+.cta-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;/*like 1 fraction so both the columns should be equal*/
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.cta-form label{
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.cta-form input, .cta-form select{
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit; /* by default the input doesn't follow the font given to the body therefore we have to make it follow the style of the body therefore "inherit" is used*/
+    color: #45260a;
+    border: none;
+    background-color: #fdf2e9;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.cta-form *:focus{ /* to select all the elements inside cta-form */
+    outline: none; /* the blue line that comes by default inside the input element */
+    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+
+
+}
+
+.btn-form{
+    
+    background-color: #45260a;
+    color: #fdf2e9;
+    padding: 1.2rem;
+    align-self: end; /* if you don't write this the button will be of different height than others */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 9px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.btn-form:hover{
+    background-color: #fdf2e9;
+    color: #45260a;
+    transition: all 0.3s;
+}
+
+/* ******************************** */
+/* ****** Footer Section**** */
+/* ******************************** */
+
+.footer{
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+.grid--footer{
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr ;
+}
+
+.logo-col{
+    display: flex;
+    flex-direction: column; /* if you don't give this everything will in the direction of flex that is horizontal */
+}
+
+.footer-logo{
+    margin-bottom: 3.2rem;
+
+}
+
+.social-links{
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.social-icon{
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.copyright{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #767676;
+    margin-top: 3.2rem;
+}
+
+.footer-heading{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.contacts{
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.address{
+    margin-bottom: 2.4rem;
+}
+
+.footer-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #767676;
+
+}
+
+.footer-link:hover{
+    color: #555;
+    transition: all 0.3s;
+}
+
+
